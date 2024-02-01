@@ -4,17 +4,18 @@ import Card from './components/Card'
 import './App.css'
 
 // const names = ['goku', 'vegeta', 'trunks', 'bulma']
+const shuffle = (array) => {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+};
 function App() {
   const [characters, setCharacters] = useState([])
   useEffect(() => {
-    const shuffle = (array) => {
-      for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-      }
-    };
+    
     fetch(`https://dragonball-api.com/api/characters?limit=10`, {mode: 'cors'}).then(function(response) {
       console.log(response.json)
       return response.json()
