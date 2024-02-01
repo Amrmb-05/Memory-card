@@ -5,7 +5,7 @@ import './App.css'
 
 // const names = ['goku', 'vegeta', 'trunks', 'bulma']
 function App() {
-  const [img, setImg] = useState([])
+  const [characters, setCharacters] = useState([])
   useEffect(() => {
     const shuffle = (array) => {
       for (var i = array.length - 1; i > 0; i--) {
@@ -22,7 +22,7 @@ function App() {
     .then(function(response){
       console.log(response.items)
       shuffle(response.items)
-      setImg(
+      setCharacters(
         response.items
       )
 
@@ -32,11 +32,11 @@ function App() {
     <>
   <div id='container'>
   
-  {img.map((photo) => (
+  {characters.map((character) => (
         <Card 
-        key={photo.name}
-        img = {photo.image}
-        name= {photo.name}
+        key={character.name}
+        img = {character.image}
+        name= {character.name}
         />
       ))}
   </div>
