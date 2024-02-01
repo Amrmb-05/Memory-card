@@ -14,6 +14,12 @@ const shuffle = (array) => {
 };
 function App() {
   const [characters, setCharacters] = useState([])
+
+  function handleShuffle() {
+    let shuffled = [...characters]
+    shuffle(shuffled)
+    setCharacters(shuffled)
+  }
   useEffect(() => {
     
     fetch(`https://dragonball-api.com/api/characters?limit=10`, {mode: 'cors'}).then(function(response) {
@@ -38,6 +44,7 @@ function App() {
         key={character.name}
         img = {character.image}
         name= {character.name}
+        onClick={handleShuffle}
         />
       ))}
   </div>

@@ -1,6 +1,6 @@
 import '../style/Card.css'
 
-export default function Card( {img, name, isClicked = false, onClick} ) {
+export default function Card( {img, name, onClick} ) {
     return (
         <>
         <div className="card" onClick={onClick}>
