@@ -79,7 +79,8 @@ function App() {
   },[])
   return (
     <>
-    <h1>Memory Card</h1>
+    <h1> <span className='title-left'>Memory</span>
+    <span className='title-right'> Card</span></h1>
     <div className='score-container'>
       <p>Score: {scores.score}</p>
       <p>Best Score: {scores.bestScore}</p>

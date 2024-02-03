@@ -50,7 +50,24 @@ body {
   grid-template-columns: repeat(5, auto);
   gap: 24px;
 }
+@font-face {
+  font-family: "Dragon-ball-left";
+  src: url("../public/fonts/Saiyan-Sans\ Left\ Oblique.ttf");
 
-h1 {
+}
+
+@font-face {
+  font-family: "Dragon-ball-right";
+  src: url("../public/fonts/Saiyan-Sans\ Right\ Oblique.ttf");
+}
+
+
+.title-left {
+  color: #D67711;
+  font-family: "Dragon-ball-left";
+}
+
+.title-right {
+  font-family: "Dragon-ball-right";
   color: #D67711;
 }
