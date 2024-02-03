@@ -16,12 +16,11 @@ const clickedCards = new Set()
 function App() {
   const [characters, setCharacters] = useState([])
   const [scores, setScores] = useState({score: 0, bestScore:0})
-  let lastClicked
+  let lastClicked;
 
 
   function handleCardClick(character) {
     lastClicked = character
-    console.log(character)
   }
 
   function handleShuffle() {
@@ -43,8 +42,6 @@ function App() {
       }
   }
   
-    
-
   function handleScoreReset() {
     setScores({...scores,
     score: 0})
@@ -52,10 +49,7 @@ function App() {
 
   
   function gameController(character) {
-    console.log(character)
     handleCardClick(character)
-    console.log(clickedCards)
-    console.log(lastClicked)
     if(clickedCards.has(lastClicked.name)) {
       handleScoreReset()
       clickedCards.clear()
@@ -63,11 +57,8 @@ function App() {
     else {
       clickedCards.add(lastClicked.name)
       handleShuffle()
-      // handleBestScore()
       handleScore()
-      // handleBestScore()
     }
-    console.log(clickedCards)
   }
 
 
@@ -100,7 +91,6 @@ function App() {
         key={character.name}
         img = {character.image}
         name= {character.name}
-        // lastClicked={handleCardClick(character.name)}
         onClick={() => gameController(character)}
         />
       ))}
