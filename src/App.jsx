@@ -14,18 +14,18 @@ const shuffle = (array) => {
   }
 };
 const clickedCards = new Set()
-let gameOver
+// let gameOver
 
 function App() {
   const [characters, setCharacters] = useState([])
   const [scores, setScores] = useState({score: 0, bestScore:0})
+  const [gameOver, setGameOver] = useState(false)
   let gameWon = false
   let lastClicked;
 
   // check if player won
   if(scores.score === 10) {
     gameWon = true
-
   }
 
   function handleCardClick(character) {
@@ -60,9 +60,9 @@ function App() {
   function gameController(character) {
     handleCardClick(character)
     if(clickedCards.has(lastClicked.name)) {
-      handleScoreReset()
+      setGameOver(true)
       clickedCards.clear()
-      gameOver = true
+     
     }
     else {
       clickedCards.add(lastClicked.name)
@@ -70,10 +70,12 @@ function App() {
       handleScore()
     }
 
-    
   }
 
- 
+  function restartGame() {
+    handleScoreReset()
+    setGameOver(false)
+  }
 
   useEffect(() => {
     
@@ -110,7 +112,7 @@ function App() {
       ))}
   </div>
      {gameWon && <WinMessage/>}
-     {gameOver && <GameOver score={scores.bestScore}/>}
+     {gameOver && <GameOver score={scores.score} onClick={restartGame}/>}
     </>
   )
 }
