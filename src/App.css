@@ -74,3 +74,8 @@ body {
   font-family: "Dragon-ball-right";
   color: #FA0011;
 }
+
+.score-container {
+  display: flex;
+  gap: 12px;
+}
