@@ -1,9 +1,16 @@
+body {
+  background-image: url('../public/Dragon\ Ball\ Z\ backgrounds\,\ Francisco\ Segovia.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   color: black;
+  
 }
 
 .logo {
@@ -38,13 +45,12 @@
   padding: 2em;
 
 }
-
-.read-the-docs {
-  color: #888;
-}
-
 #container {
   display: grid;
   grid-template-columns: repeat(5, auto);
   gap: 24px;
+}
+
+h1 {
+  color: #D67711;
 }
