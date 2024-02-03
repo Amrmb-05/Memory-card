@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import Card from './components/Card'
 import WinMessage from './components/WinMessage'
+import GameOver from './components/GameOver'
 import './App.css'
 
 const shuffle = (array) => {
@@ -13,6 +14,7 @@ const shuffle = (array) => {
   }
 };
 const clickedCards = new Set()
+let gameOver
 
 function App() {
   const [characters, setCharacters] = useState([])
@@ -23,7 +25,7 @@ function App() {
   // check if player won
   if(scores.score === 10) {
     gameWon = true
-    
+
   }
 
   function handleCardClick(character) {
@@ -60,6 +62,7 @@ function App() {
     if(clickedCards.has(lastClicked.name)) {
       handleScoreReset()
       clickedCards.clear()
+      gameOver = true
     }
     else {
       clickedCards.add(lastClicked.name)
@@ -107,6 +110,7 @@ function App() {
       ))}
   </div>
      {gameWon && <WinMessage/>}
+     {gameOver && <GameOver score={scores.bestScore}/>}
     </>
   )
 }
