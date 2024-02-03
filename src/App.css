@@ -10,7 +10,8 @@ body {
   padding: 2rem;
   text-align: center;
   color: black;
-  
+  position: relative;
+
 }
 
 .logo {

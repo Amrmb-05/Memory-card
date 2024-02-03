@@ -1,8 +1,18 @@
-.winMessage {
+@font-face {
+    font-family: "Dragon-ball";
+    src: url("../public/fonts/Saiyan-Sans.ttf");
+  }
+
+.win-message {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    top: 45%;
+    left: 30%;
     background-color: maroon;
-    z-index: 9;
+    z-index: 2;
+    padding: 32px;
 }
 
 p {
-    
+    color: #D67711;
 }

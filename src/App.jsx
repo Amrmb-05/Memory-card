@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
 import Card from './components/Card'
+import WinMessage from './components/WinMessage'
 import './App.css'
 
 const shuffle = (array) => {
@@ -16,8 +17,14 @@ const clickedCards = new Set()
 function App() {
   const [characters, setCharacters] = useState([])
   const [scores, setScores] = useState({score: 0, bestScore:0})
+  let gameWon = false
   let lastClicked;
 
+  // check if player won
+  if(scores.score === 10) {
+    gameWon = true
+    
+  }
 
   function handleCardClick(character) {
     lastClicked = character
@@ -59,8 +66,11 @@ function App() {
       handleShuffle()
       handleScore()
     }
+
+    
   }
 
+ 
 
   useEffect(() => {
     
@@ -96,7 +106,7 @@ function App() {
         />
       ))}
   </div>
-     
+     {gameWon && <WinMessage/>}
     </>
   )
 }
