@@ -1,5 +1,5 @@
 body {
-  background-image: url('../public/Dragon\ Ball\ Z\ backgrounds\,\ Francisco\ Segovia.jpeg');
+  background-image: url('/Dragon\ Ball\ Z\ backgrounds\,\ Francisco\ Segovia.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -53,13 +53,13 @@ body {
 }
 @font-face {
   font-family: "Dragon-ball-left";
-  src: url("../public/fonts/Saiyan-Sans\ Left\ Oblique.ttf");
+  src: url("/fonts/Saiyan-Sans\ Left\ Oblique.ttf");
 
 }
 
 @font-face {
   font-family: "Dragon-ball-right";
-  src: url("../public/fonts/Saiyan-Sans\ Right\ Oblique.ttf");
+  src: url("/fonts/Saiyan-Sans\ Right\ Oblique.ttf");
 }
 
 

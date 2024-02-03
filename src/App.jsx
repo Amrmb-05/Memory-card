@@ -111,7 +111,7 @@ function App() {
         />
       ))}
   </div>
-     {gameWon && <WinMessage/>}
+     {gameWon && <WinMessage onClick={restartGame}/>}
      {gameOver && <GameOver score={scores.score} onClick={restartGame}/>}
     </>
   )
