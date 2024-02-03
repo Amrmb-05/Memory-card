@@ -63,11 +63,14 @@ body {
 
 
 .title-left {
-  color: #D67711;
+  color: #F3E603;
   font-family: "Dragon-ball-left";
 }
 
+.o {
+  color: #D67711;
+}
 .title-right {
   font-family: "Dragon-ball-right";
-  color: #D67711;
+  color: #FA0011;
 }

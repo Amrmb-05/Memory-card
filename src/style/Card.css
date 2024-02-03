@@ -5,7 +5,15 @@
 
 p, h4 {
   font-family: "Dragon-ball";
-  font-size: larger;
+  font-size: x-large;
+}
+p {
+  color:#FA0011;
+  font-size: x-large;
+}
+
+h4 {
+  color:  #550000;
 }
 .card {
     /* Add shadows to create the "card" effect */
@@ -24,7 +32,7 @@ p, h4 {
     outline-style: solid;
     outline-width: 3px;
     /* outline-color: #F3E603; */
-    outline-color: blue;
+    outline-color: #F3E603;
   }
   
   /* Add some padding inside the card container */

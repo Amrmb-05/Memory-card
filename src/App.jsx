@@ -79,7 +79,7 @@ function App() {
   },[])
   return (
     <>
-    <h1> <span className='title-left'>Memory</span>
+    <h1> <span className='title-left'>Mem<span className='title-left o'>o</span>ry</span>
     <span className='title-right'> Card</span></h1>
     <div className='score-container'>
       <p>Score: {scores.score}</p>
