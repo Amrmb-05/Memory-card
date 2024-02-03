@@ -18,6 +18,7 @@ function App() {
   const [scores, setScores] = useState({score: 0, bestScore:0})
   let lastClicked
 
+
   function handleCardClick(character) {
     lastClicked = character
     console.log(character)
@@ -29,16 +30,27 @@ function App() {
     setCharacters(shuffled)
   }
 
-  function handleScoreIncrement() {
-    setScores({...scores, 
+  function handleScore() {
+    if(scores.score === scores.bestScore) {
+      setScores({
+        score: scores.score + 1,
+        bestScore: scores.bestScore + 1
+      })
+    }
+    else {
+      setScores({...scores, 
       score: scores.score + 1})
+      }
   }
+  
+    
 
   function handleScoreReset() {
     setScores({...scores,
     score: 0})
   }
 
+  
   function gameController(character) {
     console.log(character)
     handleCardClick(character)
@@ -51,7 +63,9 @@ function App() {
     else {
       clickedCards.add(lastClicked.name)
       handleShuffle()
-      handleScoreIncrement()
+      // handleBestScore()
+      handleScore()
+      // handleBestScore()
     }
     console.log(clickedCards)
   }
