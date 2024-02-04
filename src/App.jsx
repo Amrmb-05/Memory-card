@@ -94,15 +94,16 @@ function App() {
   },[])
   return (
     <>
-    <h1> <span className='title-left'>Mem<span className='title-left o'>o</span>ry</span>
+    <h1 className='title'> <span className='title-left'>Mem<span className='title-left o'>o</span>ry</span>
     <span className='title-right'> Card</span></h1>
+    <main className='main'>
     <div className='score-container'>
       <p>Score: {scores.score}</p>
       <p>Best Score: {scores.bestScore}</p>
     </div>
   <div id='container'>
   
-  {characters.map((character) => (
+  {!gameOver && characters.map((character) => (
         <Card 
         key={character.name}
         img = {character.image}
@@ -111,6 +112,7 @@ function App() {
         />
       ))}
   </div>
+  </main>
      {gameWon && <WinMessage onClick={restartGame}/>}
      {gameOver && <GameOver score={scores.score} onClick={restartGame}/>}
     </>

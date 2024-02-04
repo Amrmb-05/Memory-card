@@ -2,6 +2,8 @@ body {
   background-image: url('/Dragon\ Ball\ Z\ backgrounds\,\ Francisco\ Segovia.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+
 }
 
 #root {
@@ -10,7 +12,6 @@ body {
   padding: 2rem;
   text-align: center;
   color: black;
-  position: relative;
 
 }
 
@@ -79,4 +80,15 @@ body {
 .score-container {
   display: flex;
   gap: 12px;
+}
+
+.score-container p {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.title {
+  position: absolute;
+  bottom: 90%;
+  left: 43%;
 }
