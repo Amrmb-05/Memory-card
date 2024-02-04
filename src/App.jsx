@@ -103,7 +103,7 @@ function App() {
     </div>
   <div id='container'>
   
-  {!gameOver && characters.map((character) => (
+  {!gameOver && !gameWon && characters.map((character) => (
         <Card 
         key={character.name}
         img = {character.image}
