@@ -30,9 +30,8 @@ h4 {
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     outline-style: solid;
-    outline-width: 3px;
-    /* outline-color: #F3E603; */
     outline-color: #F3E603;
+    transform: scale(1.05);
   }
   
   /* Add some padding inside the card container */
